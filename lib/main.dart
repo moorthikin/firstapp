@@ -1,4 +1,5 @@
-import 'package:firstapp/home_page.dart';
+import 'package:firstapp/login_page.dart';
+import 'package:firstapp/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 //It was the entry point of the flutter application
@@ -13,9 +14,17 @@ class FirstApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home:HomePage(
-        
-      ) 
+      themeMode: ThemeMode.dark,
+      darkTheme:
+          ThemeData(brightness: Brightness.dark, primarySwatch: Colors.red),
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+      ),
+      initialRoute: "/home",
+      routes: {
+        "/": (context) => const LoginPage(),
+        "/home": (context) => const HomePage()
+      },
     );
   }
 }
