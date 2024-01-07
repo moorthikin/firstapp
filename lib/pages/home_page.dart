@@ -18,9 +18,11 @@ class _HomePageState extends State<HomePage> {
   final pii = 3.14;
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       appBar: AppBar(
         title: Text("First Application  "),
+        centerTitle: true,
         backgroundColor: Colors.amber,
       ),
       body: Center(
@@ -31,4 +33,6 @@ class _HomePageState extends State<HomePage> {
       drawer: Drawer(),
     );
   }
+
+  
 }
