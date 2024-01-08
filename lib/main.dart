@@ -1,5 +1,6 @@
 import 'package:firstapp/pages/login_page.dart';
 import 'package:firstapp/pages/home_page.dart';
+import 'package:firstapp/util/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -28,7 +29,8 @@ class FirstApp extends StatelessWidget {
       //we declare a routes "/" it was the default route after we customize as per our wish.
       routes: {
         "/": (context) => const LoginPage(),
-        "/home": (context) => const HomePage()
+        // FirstApproutes.loginRoute: (context) => const LoginPage(),
+        FirstApproutes.homeRoute: (context) => const HomePage()
       },
     );
   }

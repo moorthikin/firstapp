@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'package:firstapp/util/routes.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -21,7 +24,7 @@ class LoginPage extends StatelessWidget {
             const Text(
               "Welcome",
               style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 30,
                   fontWeight: FontWeight.bold,
                   color: Colors.black),
             ),
@@ -40,19 +43,20 @@ class LoginPage extends StatelessWidget {
                     keyboardType: TextInputType.number,
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
                   ElevatedButton(
                     onPressed: () {
-                      print("Hello Flutter");
+                      Navigator.pushNamed(context, FirstApproutes.homeRoute);
                     },
+                    style: const ButtonStyle(
+                        iconSize: MaterialStatePropertyAll(100.0),
+                        backgroundColor:
+                            MaterialStatePropertyAll(Colors.indigo)),
                     child: Text(
                       "Login",
                       style: TextStyle(color: Colors.black),
                     ),
-                    style: ButtonStyle(
-                        backgroundColor:
-                            MaterialStatePropertyAll(Colors.indigo)),
                   )
                 ],
               ),
