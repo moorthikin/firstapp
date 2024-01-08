@@ -29,7 +29,7 @@ class FirstApp extends StatelessWidget {
       //we declare a routes "/" it was the default route after we customize as per our wish.
       routes: {
         "/": (context) => const LoginPage(),
-        // FirstApproutes.loginRoute: (context) => const LoginPage(),
+        FirstApproutes.loginRoute: (context) => const LoginPage(),
         FirstApproutes.homeRoute: (context) => const HomePage()
       },
     );
